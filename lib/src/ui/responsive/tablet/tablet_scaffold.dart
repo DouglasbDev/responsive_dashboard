@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import '../../../components/build_card.dart';
+import '../../../components/card_item.dart';
 import '../../../components/my_box.dart';
 import '../../../components/my_tile.dart';
 import '../../../constants.dart';
@@ -24,6 +26,41 @@ class _TabletScaffoldState extends State<TabletScaffold> {
     'Tengen Uzui',
   ];
 
+  List<CardItem> item = [
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'Zenitsu Agatsuma'),
+    CardItem(
+        urlImage:
+            'https://p4.wallpaperbetter.com/wallpaper/887/471/592/tanjiro-kamado-anime-anime-boys-hd-wallpaper-preview.jpg',
+        title: 'Tanjirō Kamado'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+    CardItem(
+        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
+        title: 'nome'),
+  ];
+
+  final controller = ScrollController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,17 +70,22 @@ class _TabletScaffoldState extends State<TabletScaffold> {
       body: Column(
         children: [
           AspectRatio(
-            aspectRatio: 4,
+            aspectRatio: 6,
             child: SizedBox(
               width: double.infinity,
-              child: GridView.builder(
-                itemCount: 4,
-                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                  crossAxisCount: 4,
+              child: Scrollbar(
+                controller: controller,
+                child: SingleChildScrollView(
+                  padding: const EdgeInsets.only(top: 10, bottom: 10),
+                  controller: controller,
+                  scrollDirection: Axis.horizontal,
+                  child: ListView.builder(
+                      shrinkWrap: true,
+                      scrollDirection: Axis.horizontal,
+                      itemCount: item.length,
+                      itemBuilder: (context, index) =>
+                          buildCard(item: item[index])),
                 ),
-                itemBuilder: (context, index) {
-                  return MyBox();
-                },
               ),
             ),
           ),
