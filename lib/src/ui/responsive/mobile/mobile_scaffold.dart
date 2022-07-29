@@ -22,42 +22,43 @@ class _MobileScaffoldState extends State<MobileScaffold> {
     'Kyōjurō Rengoku',
     'Giyu Tomioka',
     'Sakonji Urokodaki',
-    'Akaza',
     'Tengen Uzui',
+    'Akaza',
   ];
 
   List<CardItem> item = [
-    CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'Zenitsu Agatsuma'),
     CardItem(
         urlImage:
             'https://p4.wallpaperbetter.com/wallpaper/887/471/592/tanjiro-kamado-anime-anime-boys-hd-wallpaper-preview.jpg',
         title: 'Tanjirō Kamado'),
     CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
+        urlImage:
+            'https://images.wallpapersden.com/image/download/kimetsu-no-yaiba-art-nezuko-kamado_bGhrbWuUmZqaraWkpJRmbmdlrWZlbWU.jpg',
+        title: 'Nezuko Kamado'),
     CardItem(
         urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
+        title: 'Zenitsu Agatsuma'),
+    CardItem(
+        urlImage:
+            'https://img1.ak.crunchyroll.com/i/spire3-tmb/6070dc5bcb56020bbcb0c1981378ac261561190278_main.jpg',
+        title: 'Inosuke Hashibira'),
+    CardItem(
+        urlImage:
+            'https://i0.wp.com/www.nerdsite.com.br/wp-content/uploads/2022/04/demon-slayer-rengoku.jpg?fit=1213%2C678&ssl=1',
+        title: 'Kyōjurō Rengoku'),
     CardItem(
         urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
+        title: 'Giyu Tomioka'),
+    CardItem(
+        urlImage: 'https://pbs.twimg.com/media/EzBARq4XAAIcCEN.jpg:large',
+        title: 'Sakonji Urokodaki'),
     CardItem(
         urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
+        title: 'Tengen Uzui'),
     CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
-    CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
-    CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
-    CardItem(
-        urlImage: 'https://images6.alphacoders.com/104/1040994.jpg',
-        title: 'nome'),
+        urlImage:
+            'https://criticalhits.com.br/wp-content/uploads/2021/11/Akaza_coaxing_Kyojuro_into_becoming_a_demon.png',
+        title: 'Akaza'),
   ];
 
   final controller = ScrollController();
@@ -95,6 +96,7 @@ class _MobileScaffoldState extends State<MobileScaffold> {
             itemCount: _list.length,
             itemBuilder: (context, index) {
               return MyTile(
+                onTap: () {  },
                 child: _list[index],
               );
             },
